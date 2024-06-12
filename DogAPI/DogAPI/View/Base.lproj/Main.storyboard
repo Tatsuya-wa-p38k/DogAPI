@@ -84,7 +84,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YZa-oU-Mhr">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="de0-7p-Uj4">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="de0-7p-Uj4">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -98,7 +98,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-Uq-X9h">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-Uq-X9h">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 </imageView>
                                             </subviews>
@@ -137,6 +137,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPo-gf-gom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954.96183206106866" y="17.605633802816904"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vNr-FI-xER">
+            <objects>
+                <viewController id="Wc2-go-Vth" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uYl-LE-RHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kOT-cQ-36m">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E1k-Qd-nsX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kOT-cQ-36m" firstAttribute="top" secondItem="E1k-Qd-nsX" secondAttribute="top" id="UYd-Yg-kgK"/>
+                            <constraint firstItem="E1k-Qd-nsX" firstAttribute="trailing" secondItem="kOT-cQ-36m" secondAttribute="trailing" id="Zno-Z7-EuM"/>
+                            <constraint firstItem="kOT-cQ-36m" firstAttribute="leading" secondItem="E1k-Qd-nsX" secondAttribute="leading" id="ekc-mu-eHy"/>
+                            <constraint firstItem="E1k-Qd-nsX" firstAttribute="bottom" secondItem="kOT-cQ-36m" secondAttribute="bottom" id="pfm-bt-EtU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKg-pq-iR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="32"/>
         </scene>
     </scenes>
     <resources>

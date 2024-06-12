@@ -1,6 +1,6 @@
 import UIKit
 
-    class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -12,6 +12,7 @@ import UIKit
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
 
         // 犬の種類に基づいてAPIから画像を取得する関数を呼び出す
         if let breed = breed {
@@ -47,9 +48,20 @@ import UIKit
            }
            return cell
        }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+             let width = (collectionView.frame.width  / 2) // 横に2つ並べるために幅を調整
+             return CGSize(width: width, height: width) // 正方形のセルを設定
+         }
    }
 
 class DogImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // 画像のアスペクト比を維持するように設定
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+    }
 }
 
