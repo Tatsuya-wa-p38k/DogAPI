@@ -16,6 +16,7 @@
 		BB03B34E2C16C27E004FC6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB03B34C2C16C27E004FC6CC /* LaunchScreen.storyboard */; };
 		BB03B3562C16C3EB004FC6CC /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03B3552C16C3EB004FC6CC /* Struct.swift */; };
 		BB03B3582C16C543004FC6CC /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03B3572C16C543004FC6CC /* Dog.swift */; };
+		BBC17DF52C19425F00EFE543 /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC17DF42C19425F00EFE543 /* FullImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BB03B34F2C16C27E004FC6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB03B3552C16C3EB004FC6CC /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		BB03B3572C16C543004FC6CC /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		BBC17DF42C19425F00EFE543 /* FullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		BB03B3352C16C27C004FC6CC = {
 			isa = PBXGroup;
 			children = (
+				BBC17DF42C19425F00EFE543 /* FullImageViewController.swift */,
 				BB03B3402C16C27C004FC6CC /* DogAPI */,
 				BB03B33F2C16C27C004FC6CC /* Products */,
 			);
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC17DF52C19425F00EFE543 /* FullImageViewController.swift in Sources */,
 				BB0365D22C16E13C00A84762 /* CollectionViewController.swift in Sources */,
 				BB03B3562C16C3EB004FC6CC /* Struct.swift in Sources */,
 				BB03B3462C16C27C004FC6CC /* ViewController.swift in Sources */,

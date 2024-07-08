@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMw-0o-E9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="-4"/>
+            <point key="canvasLocation" x="-569" y="18"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -111,6 +111,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="imageView" destination="XHJ-Uq-X9h" id="dae-gy-5LQ"/>
+                                            <segue destination="Wc2-go-Vth" kind="show" identifier="showFullImage" id="jJ7-fQ-Jn9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -138,16 +139,16 @@
             </objects>
             <point key="canvasLocation" x="954.96183206106866" y="17.605633802816904"/>
         </scene>
-        <!--View Controller-->
+        <!--Full Image View Controller-->
         <scene sceneID="vNr-FI-xER">
             <objects>
-                <viewController id="Wc2-go-Vth" sceneMemberID="viewController">
+                <viewController id="Wc2-go-Vth" customClass="FullImageViewController" customModule="DogAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uYl-LE-RHJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kOT-cQ-36m">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E1k-Qd-nsX"/>
@@ -159,10 +160,14 @@
                             <constraint firstItem="E1k-Qd-nsX" firstAttribute="bottom" secondItem="kOT-cQ-36m" secondAttribute="bottom" id="pfm-bt-EtU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="O2a-i3-U50"/>
+                    <connections>
+                        <outlet property="imageView" destination="kOT-cQ-36m" id="LO3-QI-KEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKg-pq-iR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="32"/>
+            <point key="canvasLocation" x="1724" y="18"/>
         </scene>
     </scenes>
     <resources>

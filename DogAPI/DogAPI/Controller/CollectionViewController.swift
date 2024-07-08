@@ -52,6 +52,19 @@ import UIKit
              let width = (collectionView.frame.width  / 2) // 横に2つ並べるために幅を調整
              return CGSize(width: width, height: width) // 正方形のセルを設定
          }
+
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let selectedImageURL = dogImages[indexPath.row]
+            performSegue(withIdentifier: "showFullImage", sender: selectedImageURL)
+        }
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showFullImage", let imageURL = sender as? String {
+                if let destinationVC = segue.destination as? FullImageViewController {
+                    destinationVC.imageURL = imageURL
+                }
+            }
+        }
    }
 
 class DogImageCell: UICollectionViewCell {
@@ -64,4 +77,3 @@ class DogImageCell: UICollectionViewCell {
         imageView.clipsToBounds = true
     }
 }
-
