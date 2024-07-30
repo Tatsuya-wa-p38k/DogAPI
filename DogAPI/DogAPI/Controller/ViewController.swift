@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UINavigationControllerDelegate {
 
     var dogBreeds: [String] = []
 
@@ -11,6 +11,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self // デリゲートをセット
+        
+       navigationController?.delegate = self
         // Do any additional setup after loading the view.
 
         // 犬の種類を取得する関数を呼び出し
@@ -25,6 +27,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+          if viewController == self {
+              // ViewControllerに戻る前に選択解除を行う
+              if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                  tableView.deselectRow(at: selectedIndexPath, animated: false)
+              }
+          }
+      }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dogBreeds.count
