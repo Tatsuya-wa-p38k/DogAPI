@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BxE-nh-4JA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BxE-nh-4JA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -38,15 +39,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DogImageCell" id="FGf-FM-59E">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FGf-FM-59E" id="emJ-Nf-NHf">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="44.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="jbU-NW-Ifi" kind="show" identifier="showCollectionView" id="sc1-H1-mvf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -67,11 +65,12 @@
                     <navigationItem key="navigationItem" id="bm9-cU-e1l"/>
                     <connections>
                         <outlet property="tableView" destination="0Kt-jG-dOM" id="Jre-tl-GYE"/>
+                        <segue destination="jbU-NW-Ifi" kind="show" identifier="showCollectionView" id="cBv-zQ-EcE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="18"/>
+            <point key="canvasLocation" x="277" y="18"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="Vhi-f7-FyV">
@@ -111,7 +110,6 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="imageView" destination="XHJ-Uq-X9h" id="dae-gy-5LQ"/>
-                                            <segue destination="Wc2-go-Vth" kind="show" identifier="showFullImage" id="jJ7-fQ-Jn9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -133,11 +131,12 @@
                     <navigationItem key="navigationItem" id="r7O-Wt-jeX"/>
                     <connections>
                         <outlet property="collectionView" destination="YZa-oU-Mhr" id="phe-gy-HJf"/>
+                        <segue destination="Wc2-go-Vth" kind="show" identifier="showFullImage" id="c7Q-1c-jCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPo-gf-gom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954.96183206106866" y="17.605633802816904"/>
+            <point key="canvasLocation" x="1039" y="18"/>
         </scene>
         <!--Full Image View Controller-->
         <scene sceneID="vNr-FI-xER">
@@ -167,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKg-pq-iR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="18"/>
+            <point key="canvasLocation" x="1830" y="18"/>
         </scene>
     </scenes>
     <resources>
