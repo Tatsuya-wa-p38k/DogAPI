@@ -10,8 +10,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = self // デリゲートをセット
-        
+        tableView.delegate = self 
        navigationController?.delegate = self
         // Do any additional setup after loading the view.
 

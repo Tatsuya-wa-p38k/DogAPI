@@ -64,6 +64,13 @@ import UIKit
             if segue.identifier == "showFullImage", let imageURL = sender as? String {
                 if let destinationVC = segue.destination as? FullImageViewController {
                     destinationVC.imageURL = imageURL
+                    destinationVC.breedName = breed  
+                    
+                    // カスタムの戻るボタンタイトルを設定
+                    //下記設定をしないとFullI¥ImageViewControllerの戻るボタンタイトルが犬種になってしまうため
+                    let backButton = UIBarButtonItem()
+                    backButton.title = "Back"
+                    navigationItem.backBarButtonItem = backButton
                 }
             }
         }
