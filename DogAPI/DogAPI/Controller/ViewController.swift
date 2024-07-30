@@ -3,7 +3,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UINavigationControllerDelegate {
 
-    var dogBreeds: [String] = []
+    var dogBreeds: [String] = []//犬種のリストを保持するための空の配列
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        navigationController?.delegate = self
         // Do any additional setup after loading the view.
 
-        // 犬の種類を取得する関数を呼び出し
+        // Dog.swiftにある犬の種類を取得する関数を呼び出す
         DogAPI.fetchDogBreeds { breeds in
             DispatchQueue.main.async {
                 if let breeds = breeds {
