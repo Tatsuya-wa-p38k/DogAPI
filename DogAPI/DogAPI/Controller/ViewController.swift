@@ -56,6 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
          if segue.identifier == "showCollectionView", let selectedBreed = sender as? String {
              if let destinationVC = segue.destination as? CollectionViewController {
                  destinationVC.breed = selectedBreed
+                 destinationVC.title = selectedBreed
              }
          }
      }

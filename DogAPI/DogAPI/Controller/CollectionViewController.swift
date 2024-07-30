@@ -13,7 +13,9 @@ import UIKit
 
         collectionView.dataSource = self
         collectionView.delegate = self
-
+        
+        navigationItem.title = breed
+    
         // 犬の種類に基づいてAPIから画像を取得する関数を呼び出す
         if let breed = breed {
                    DogAPI.fetchDogImages(for: breed) { images in
